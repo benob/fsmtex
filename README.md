@@ -8,7 +8,7 @@ Requirements
 
 - the tikz latex package
 - dot from graphviz
-- fsm2dot.pl and dot2tikz.pl accessible in your path
+- fsm2dot.pl and dot2tikz.pl in the compilation directory
 
 Usage
 -----
