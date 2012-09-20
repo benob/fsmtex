@@ -1,0 +1,26 @@
+% Draw FSMs directly in a latex environment
+% 
+% (c) Benoit Favre
+% LPPL LaTeX Public Project License
+%  
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{fsm}
+[2012/09/20 v0.01 Draw FSMs directly in a latex environment using 'dot']
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newenvironment{fsm}
+{
+\VerbatimEnvironment
+\begin{VerbatimOut}{\jobname.fsm}}
+{
+\end{VerbatimOut}
+\def\cmd{perl fsm2dot.pl < \jobname.fsm | dot | perl dot2tikz.pl > \jobname.tikz}
+\immediate\typeout{Running "\cmd"}
+\immediate\write18{\cmd}
+\immediate\input{\jobname.tikz}
+}
+
+\endinput
+%%
+%% End of file `mypackage.sty'.

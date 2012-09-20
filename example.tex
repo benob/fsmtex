@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fsm}
+
+\begin{document}
+
+Ceci est du texte avant l'automate
+
+\begin{center}
+\begin{fsm}
+0 1 $\epsilon$
+1 1 $x$
+0 2 $\frac{a}{b}$
+1 2 b{\bf c}
+2 1 $c^2$
+2 3 {\'e}
+1 3 ah ah
+3
+\end{fsm}
+\end{center}
+
+Ceci est du texte après l'automate
+
+\end{document}
