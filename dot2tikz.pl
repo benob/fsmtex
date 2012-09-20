@@ -17,7 +17,7 @@ while(<>) {
         }
         print "\\draw ($3bp,$4bp) node {$1};\n";
     }
-    if(/^\s*(\d+) -> (\d+) \[label="?(.*?)"?, pos="e,([^"]+)", lp="([^,]+),([^"]+)"/) {
+    if(/^\s*(\d+) -> (\d+) \[label2="?(.*?)"?,.*pos="e,([^"]+)", lp="([^,]+),([^"]+)"/) {
         my @spline = split(/[\s,]+/, $4);
         print "\\draw [->] ";
         for($i = 2; $i < scalar(@spline) - 2; $i+=6) {

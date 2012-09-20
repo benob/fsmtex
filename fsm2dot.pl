@@ -9,7 +9,7 @@ print "rankdir=LR;\n";
 while(<>) {
     chomp();
     if(/^\s*(\S+)\s+(\S+)\s+(.*)$/) {
-        print "$1 -> $2 [label=\"$3\"];\n";
+        print "$1 -> $2 [label2=\"$3\", label=\"MM\"];\n";
     } elsif(/^\s*(\S+)\s*$/) {
         push @final, $1;
     }
